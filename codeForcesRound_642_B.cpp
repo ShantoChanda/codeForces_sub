@@ -1,7 +1,7 @@
 /*
 ***** SHANTO
 ***
-***** DATE :24/10/23
+***** DATE :11/03/24
 */
 //*******C++ HEADER*******//
 #include<iostream>
@@ -40,6 +40,29 @@ int main() {
 	speedIO
 	test(t)
 	while(t--){
-		ll n;cin>>n;	
+		int n;cin>>n;
+		int k;cin >> k;
+		vector<int> a(n) , b(n);
+		forA(a)cin>>i;
+		forA(b)cin>>i;
+		sort(vbe(b), greater<int>());
+		sort(vbe(a));
+		
+		forF(0,k){
+			if(a[i] > b[i]){
+				break;
+			}
+			else{
+				int temp = a[i];
+				a[i] = b[i];
+				b[i] = a[i];
+			}
+		}
+		int sum = 0;
+		forA(a){
+			sum += i;
+		}
+		out(sum);
+		
 	}
 }
